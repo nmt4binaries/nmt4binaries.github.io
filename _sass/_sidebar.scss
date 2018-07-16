@@ -1,0 +1,207 @@
+/*!
+ * Start Bootstrap - Simple Sidebar HTML Template (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
+
+
+/* Toggle Styles */
+
+#theWrapper {
+    padding-left: 0;
+
+    @include transition(all 0.5s ease);
+
+    &.toggled {
+        padding-left: $sidebar-width;
+    }
+}
+
+
+#theMenu {
+    z-index: 1000;
+    position: fixed;
+    left: $sidebar-width;
+    width: 0;
+    height: 100%;
+    margin-left: -$sidebar-width;
+    overflow-y: auto;
+    background: $sidebar-background-color;
+
+    @include transition(all 0.5s ease);
+}
+
+#theWrapper.toggled #theMenu {
+    width: $sidebar-width;
+}
+
+#page-content-wrapper {
+    width: 100%;
+    padding: 0.75 * $sidebar-spacing-unit;
+}
+
+#theWrapper.toggled #page-content-wrapper {
+    position: absolute;
+    margin-right: -$sidebar-width;
+}
+
+
+/* Close at minimum width */
+
+@media(min-width: $sidebar-width * 3) {
+    #theWrapper {
+        padding-left: $sidebar-width;
+    }
+
+    #theWrapper.toggled {
+        padding-left: 0;
+    }
+
+    #theMenu {
+        width: $sidebar-width;
+    }
+
+    #theWrapper.toggled #theMenu {
+        width: 0;
+    }
+
+    #page-content-wrapper {
+        padding: $sidebar-spacing-unit;
+    }
+
+    #theWrapper.toggled #page-content-wrapper {
+        position: relative;
+        margin-right: 0;
+    }
+}
+
+
+/* Sidebar Styles */
+
+.sidebar-nav {
+    position: absolute;
+    top: 0;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    h1, h2, h3, h4, h5, h6 {
+        font-size: 0.8 * $heading-font-size;
+    }
+
+
+    li {
+        text-indent: $sidebar-spacing-unit;
+
+        a {
+            line-height: 40px;
+            display: block;
+            color: $sidebar-secondary-color;
+
+            &:link, &:active, &:focus {
+                text-decoration: none;
+            }
+            
+            &:hover {
+                color: $sidebar-primary-color;
+                background: lighten($sidebar-background-color, 15%);
+            }
+        }
+    }
+
+    > .sidebar-brand {
+        height: 65px;
+
+        a {
+            color: $sidebar-primary-color;
+
+            &:hover {
+                color: $sidebar-brand-color;
+                background: none;
+            }
+        }
+    }
+}
+
+
+/* MENU CONF */
+
+
+#theMenu .sidebar-nav {
+    font-size: $sidebar-font-size;
+    font-family: $sidebar-font-family;
+    width: $sidebar-width;
+
+    li ~ li {
+        text-indent: $sidebar-spacing-unit * 1.5;
+    }
+
+    a {
+        font-weight: 700;
+        letter-spacing: 0.10em;
+        text-transform: uppercase;
+    }
+
+    .sidebar-brand a {
+        letter-spacing: 0.15em;
+        margin-top: $sidebar-spacing-unit;
+    }
+
+    .icons {
+        text-indent: 0;
+        padding-left: $sidebar-spacing-unit * 1.5;
+    }
+
+    .icons a > i {
+        float: left;
+        display: inline-block;
+        vertical-align: middle;
+        text-align: left;
+        line-height: 40px;
+        margin: 25px 2px;
+        width: 30px;
+        /* width: ($sidebar-width - 4 * $sidebar-spacing-unit) / 5; */
+        font-size: 16px;
+    }
+
+    .icon-text {
+        display: none;
+        font-family: $alt-font-family;
+        font-size: $alt-font-size;
+        color: $sidebar-secondary-color;
+    }
+}
+
+
+/* Button that toggles menu */
+
+#menu-toggle {
+    font-size: 14px;
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    z-index: 1;
+    background: darken($background-color, 25%);
+    color: $background-color;
+    text-align: center;
+
+    @include transition(all .1s ease-in-out);
+
+    &:hover {
+        background: darken($background-color, 50%);
+        @include transition(all .1s ease-in-out);
+    }
+}
+
+
+/* Absolute positioned wrapper for the element you want to fix position */
+.fixed-menu-toggle-wrapper {
+    position: absolute;
+    top: 20px;
+    right: -20px;
+}
+
+#page-content-wrapper > .container-fluid {
+    margin-left: 50px;
+}

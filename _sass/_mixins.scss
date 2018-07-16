@@ -1,0 +1,32 @@
+
+/* Heading font mixin */
+
+@mixin headingfont($coef, $laptopCoef) {
+   font-size: $heading-font-size * $coef;
+
+   @include media-query($on-laptop) {
+      font-size: $heading-font-size * $laptopCoef;
+   }
+}
+
+
+// Using media queries with like this:
+// @include media-query($palm) {
+//     .wrapper {
+//         padding-right: $spacing-unit / 2;
+//         padding-left: $spacing-unit / 2;
+//     }
+// }
+@mixin media-query($device) {
+    @media screen and (max-width: $device) {
+        @content;
+    }
+}
+
+@mixin transition($args...) {
+  -webkit-transition: $args;
+     -moz-transition: $args;
+      -ms-transition: $args;
+       -o-transition: $args;
+          transition: $args;
+}

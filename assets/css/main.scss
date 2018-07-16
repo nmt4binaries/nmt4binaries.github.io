@@ -1,0 +1,62 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+@charset "utf-8";
+
+
+
+// Our variables
+$base-font-family: 'Merriweather', serif;
+$base-font-size:   18px;
+$small-font-size:  $base-font-size * 0.875;
+$base-line-height: 1.5;
+
+$heading-font-family: 'Oswald', sans-serif;
+$heading-font-size: 20px;
+$heading-letter-spacing: 1px;
+
+$alt-font-family: 'PT Sans', sans-serif;
+$alt-font-size: 18px;
+
+$spacing-unit:       30px;
+
+$text-color:         #555;
+$background-color:   #f2f2f2;
+
+$grey-color:         #828282;
+$grey-color-light:   lighten($grey-color, 40%);
+$grey-color-dark:    darken($grey-color, 25%);
+
+$orange-color:       #f85c37;
+$orange-color-light: lighten($orange-color, 30%);
+$orange-color-dark:  darken($orange-color, 15%);
+
+$brand-color:   $orange-color;
+
+
+$on-palm:          600px;
+$on-laptop:        800px;
+
+
+// Sidebar variables
+
+$sidebar-width:           250px;
+$sidebar-spacing-unit:     20px;
+$sidebar-font-size:        12px;
+$sidebar-font-family:  'Merriweather', serif;
+
+$sidebar-background-color:  darken($grey-color, 40.8%);
+$sidebar-primary-color:     $grey-color-light;
+$sidebar-secondary-color:   $grey-color;
+$sidebar-brand-color:       $brand-color;
+
+
+// Import partials from `sass_dir` (defaults to `_sass`)
+@import
+        "mixins",
+        "base",
+        "sidebar",
+        "layout",
+        "syntax-highlighting",
+        "publications"
+;

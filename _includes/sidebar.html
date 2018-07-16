@@ -1,0 +1,58 @@
+<!-- Sidebar -->
+<div id="theMenu">
+  <ul class="sidebar-nav">
+    <li class="sidebar-brand">
+      <h1 class="logo"><a href="#">{{ site.author }}</a></h1>
+    </li>
+    {% for section in page.sections %}
+    <li>
+      {% assign prefix = section.link |  split: "#" | first %}
+      {% if prefix == "" %}
+        <a data-scroll href="{{ section.link }}">{{ section.title }}</a>
+      {% else %}
+        <a href="{{ section.link }}">{{ section.title }}</a>
+      {% endif %}
+    </li>
+    {% endfor %}
+
+    <li class="icons">
+      <!-- Linked In -->
+      <a href="https://gr.linkedin.com/pub/george-balatsouras/25/a29/799"  data-target="#my-linkedin">
+        <i class="fa fa-linkedin"></i>
+      </a>
+
+      <!-- Last FM -->
+      <a href="http://www.last.fm/user/{{ site.lastfm_username }}" data-target="#my-lastfm">
+        <i class="fa fa-lastfm"></i>
+      </a>
+
+      <!-- Bitbucket -->
+      <a href="https://bitbucket.org/{{ site.bitbucket_username }}" data-target="#my-bitbucket">
+        <i class="fa fa-bitbucket"></i>
+      </a>
+
+      <!-- Github -->
+      <a href="https://github.com/{{ site.github_username }}" data-target="#my-github">
+        <i class="fa fa-github"></i>
+      </a>
+
+      <a id="fake_email" href="#" data-target="#my-my-hey-hey">
+        <i class="fa fa-envelope"></i>
+      </a>
+      <!-- <a href="https://plus.google.com/117181205673986226103"><i class="fa fa-google-plus"></i></a> -->
+    </li>
+
+    <!-- Text to display on icon hover -->
+    <li id="my-linkedin" class="icon-text">gr.linkedin.com/</li>
+    <li id="my-lastfm" class="icon-text">last.fm/user/{{ site.lastfm_username }}</li>
+    <li id="my-github" class="icon-text">github.com/{{ site.github_username }}</li>
+    <li id="my-bitbucket" class="icon-text">bitbucket.org/{{ site.bitbucket_username }}</li>
+  </ul>
+
+  <!-- Toggle Menu button -->
+  <div class="fixed-menu-toggle-wrapper">
+    <div id="menu-toggle">
+      <i class="fa fa-reorder"></i>
+    </div>
+  </div>
+</div><!-- /#theMenu -->

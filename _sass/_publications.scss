@@ -1,0 +1,55 @@
+/* Publications */
+
+.paper {
+  margin-bottom: $spacing-unit;
+
+  .conf, .journal {
+    margin-left: $spacing-unit / 2;
+  }
+
+  .paper-heading {
+    font-weight: 400;
+    letter-spacing: 2px;
+  }
+
+  p.paper-abstract {
+    font-family: $alt-font-family;
+    font-size: $alt-font-size;
+  }
+
+  .paper-authors {
+    display: block;
+    font-weight: 200;
+    font-size: 90%;
+  }
+
+
+  /* Redefine some colors */
+
+  .paper-heading a:first-of-type {
+      &:link, &:visited, &:focus {
+          color: $grey-color-dark;
+      }
+
+      &:hover, &:active {
+          color: $grey-color;
+      }
+  }
+
+  a.btn {
+      &:visited, &:focus {
+          color: $orange-color;
+      }
+
+      &:hover, &:active {
+          color: $grey-color;
+      }
+  }
+
+
+  /* Download Buttons */
+
+  .download-btn, .toggle-abstract {
+      padding: $spacing-unit / 4;
+  }
+}

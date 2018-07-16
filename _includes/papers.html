@@ -1,0 +1,54 @@
+<div id="papers" class="">
+
+  {% for paper in site.data.publications%}
+  <div class="paper">
+    <h3 class="paper-heading">
+      <!-- Paper Title -->
+      {% if paper.url %}
+      <a href="{{ paper.url }}">{{ paper.title }}</a>
+      {% elsif paper.doi %}
+      <a href="{{ paper.doi | prepend:'http://dx.doi.org/' }}">{{ paper.title }}</a>
+      {% elsif paper.pdf_link %}
+      <a href="{{ paper.pdf_link }}">{{ paper.title }}</a>
+      {% else %}
+      {{ paper.title }}
+      {% endif %}
+      <!-- Toggle Abstract Button -->
+      <a class="btn toggle-abstract" data-toggle="collapse"
+         data-target="#abstract{{ forloop.index }}"
+         title="Click to toggle abstract">
+        abstract
+      </a>
+      <!-- Download Button -->
+      <a class="btn download-btn" href="{{ paper.pdf_link }}"
+         title="Download PDF">
+        pdf <i class="fa fa-file-pdf-o fa-lg"></i>
+      </a>
+      {% if paper.pps_link %}
+      <!-- Download Presentation Button -->
+      <a class="btn download-btn" href="{{ paper.pps_link }}"
+         title="Download presentation">
+        slides <i class="fa fa-file-powerpoint-o fa-lg"></i>
+      </a>
+      {% endif %}
+      <!-- Paper Authors -->
+      <span class="paper-authors">
+        {{ paper.authors | join: ', ' }}
+        {% if paper.conference %}
+        <!-- Conference -->
+        <span class="conf">{{ paper.conference }}</span>
+        {% elsif paper.journal %}
+        <!-- Journal -->
+        <span class="journal">{{ paper.journal }}</span>
+        {% elsif paper.thesis %}
+        <span class="thesis">{{ paper.thesis }}</span>
+        {% endif %}
+      </span>
+    </h3>
+    <div id="abstract{{ forloop.index }}" class="paper-abstract collapse">
+      {{ paper.abstract }}
+    </div><!-- /paper-abstract -->
+  </div> <!-- /paper -->
+  {% endfor %}
+
+</div> <!-- /papers -->
