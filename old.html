@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Personal web page of George Balatsouras">
+  <meta name="author" content="George Balatsouras">
+
+  <title>G. Balatsouras | Homepage</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Font-awesome CSS -->
+  <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+
+  <!-- Custom CSS -->
+  <link href="assets/css/simple-sidebar.css" rel="stylesheet">
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <script src="assets/js/jquery.min.js"></script>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Oswald:400,300,700"
+        rel="stylesheet" type="text/css">
+
+  <link href="https://fonts.googleapis.com/css?family=EB+Garamond"
+        rel="stylesheet" type="text/css">
+
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans"
+        rel="stylesheet" type="text/css">
+
+  <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700italic"
+        rel="stylesheet" type="text/css" />
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div id="wrapper">
+
+    <!-- Sidebar -->
+    <div id="theMenu">
+      <ul class="sidebar-nav">
+        <li class="sidebar-brand">
+          <h1 class="logo"><a href="#">George Balatsouras</a></h1>
+        </li>
+        <li><a data-scroll href="#about">About Me</a><li>
+        <li><a data-scroll href="#publications">Publications</a><li>
+        <li><a data-scroll href="#presentations">Presentations</a><li>
+        <li><a data-scroll href="#emacs">The One True Editor</a><li>
+        <li><a data-scroll href="#portfolio">Portfolio</a><li>
+        <li><a data-scroll href="#contact">Contact</a></li>
+        <li class="icons">
+          <a href="https://gr.linkedin.com/pub/george-balatsouras/25/a29/799">
+            <i class="fa fa-linkedin"></i>
+          </a>
+          <a href="http://www.last.fm/user/gbalats"><i class="fa fa-lastfm"></i></a>
+          <a href="https://bitbucket.org/gbal"><i class="fa fa-bitbucket"></i></a>
+          <a href="https://github.com/gbalats"><i class="fa fa-github"></i></a>
+          <a id="fake_email" href="#"><i class="fa fa-envelope"></i></a>
+          <!-- <a href="https://plus.google.com/117181205673986226103"><i class="fa fa-google-plus"></i></a> -->
+        </li>
+      </ul>
+
+      <!-- Toggle Menu button -->
+      <div class="fixed-menu-toggle-wrapper">
+        <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">
+          <i class="fa fa-reorder"></i>
+        </a>
+      </div>
+    </div><!-- /#theMenu -->
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+      <div class="container-fluid">
+        <!-- ========== PUBLICATIONS SECTION ========== -->
+        <div class="row sect">
+          <div id="publications" class="col-xs-12 col-md-11 col-md-offset-1 col-lg-10">
+            <div class="page-header">
+              <h3>PUBLICATIONS <small>plus slides</small></h3>
+              <!-- <p class="my-bullets"> -->
+              <!--   <i class="fa fa-circle"></i> -->
+              <!--   <i class="fa fa-circle"></i> -->
+              <!--   <i class="fa fa-circle"></i> -->
+              <!-- </p> -->
+            </div>
+
+            <div id="papers" class="">
+
+              <!-- Class Hierarchy Complementation Paper -->
+              <div class="paper">
+                <h4 class="paper-heading">
+                  <!-- Paper Title -->
+                  <a href="http://dl.acm.org/citation.cfm?id=2509136.2509530">
+                    Class Hierarchy Complementation: Soundly Completing a
+                    Partial Type Graph
+                  </a>
+                  <!-- Toggle Abstract Button -->
+                  <a class="btn toggle-abstract" data-toggle="collapse"
+                     data-target="#jphantom-abstract">
+                    abstract
+                  </a>
+                  <!-- Download Button -->
+                  <a class="btn download-btn" href="http://yanniss.github.io/jphantom-oopsla13.pdf">
+                    pdf <i class="fa fa-file-pdf-o fa-lg"></i>
+                  </a>
+                  <!-- Download Presentation Button -->
+                  <a class="btn download-btn" href="assets/presentations/oopsla2013-jphantom.pdf">
+                    slides <i class="fa fa-file-powerpoint-o fa-lg"></i>
+                  </a>
+                  <!-- Paper Authors -->
+                  <span class="paper-authors">
+                    George Balatsouras, Yannis Smaragdakis
+                    <!-- Conference -->
+                    <span class="conf">OOPSLA '13</span>
+                  </span>
+                </h4>
+                <p id="jphantom-abstract" class="paper-abstract collapse">
+                  We present the problem of class hierarchy
+                  complementation: given a partially known hierarchy of
+                  classes together with subtyping constraints (“A has to
+                  be a transitive subtype of B”) complete the hierarchy so
+                  that it satisfies all constraints. The problem has
+                  immediate practical application to the analysis of
+                  partial programs—e.g., it arises in the process of
+                  providing a sound handling of “phantom classes” in the
+                  Soot program analysis framework. We provide algorithms
+                  to solve the hierarchy complementation problem in the
+                  single inheritance and multiple inheritance settings. We
+                  also show that the problem in a language such as Java,
+                  with single inheritance but multiple subtyping and
+                  distinguished class vs. interface types, can be
+                  decomposed into separate single- and multiple-subtyping
+                  instances. We implement our algorithms in a tool,
+                  JPhantom, which complements partial Java bytecode
+                  programs so that the result is guaranteed to satisfy the
+                  Java verifier requirements. JPhantom is highly scalable
+                  and runs in mere seconds even for large input
+                  applications and complex constraints (with a maximum of
+                  14s for a 19MB binary).
+                </p><!-- /paper-abstract -->
+              </div> <!-- /paper -->
+
+              <!-- Set-based Paper -->
+              <div class="paper">
+                <h4 class="paper-heading">
+                  <!-- Paper Title -->
+                  <a href="http://dl.acm.org/citation.cfm?id=2509136.2509524">
+                    Set-Based Pre-Processing for Points-To Analysis
+                  </a>
+                  <!-- Toggle Abstract Button -->
+                  <a class="btn toggle-abstract" data-toggle="collapse"
+                     data-target="#set-based-abstract">
+                    abstract
+                  </a>
+                  <!-- Download Button -->
+                  <a class="btn download-btn" href="http://yanniss.github.io/set-based-oopsla13.pdf">
+                    pdf <i class="fa fa-file-pdf-o fa-lg"></i>
+                  </a>
+                  <!-- Paper Authors -->
+                  <span class="paper-authors">
+                    Yannis Smaragdakis, George Balatsouras, George Kastrinis
+                    <!-- Conference -->
+                    <span class="conf">OOPSLA '13</span>
+                  </span>
+                </h4>
+                <p id="set-based-abstract" class="paper-abstract collapse">
+                  We present set-based pre-analysis: a virtually universal
+                  optimization technique for flow-insensitive points-to
+                  analysis. Points-to analysis computes a static
+                  abstraction of how object values flow through a
+                  program’s variables. Set-based pre-analysis relies on
+                  the observation that much of this reasoning can take
+                  place at the set level rather than the value
+                  level. Computing constraints at the set level results in
+                  significant optimization opportunities: we can rewrite
+                  the in- put program into a simplified form with the same
+                  essential points-to properties. This rewrite results in
+                  removing both local variables and instructions, thus
+                  simplifying the subsequent value-based points-to
+                  computation. Effectively, set-based pre-analysis puts
+                  the program in a normal form optimized for points-to
+                  analysis.  Compared to other techniques for off-line
+                  optimization of points-to analyses in the literature,
+                  the new elements of our approach are the ability to
+                  eliminate statements, and not just variables, as well as
+                  its modularity: set-based pre-analysis can be performed
+                  on the input just once, e.g., allowing the
+                  pre-optimization of libraries that are subsequently
+                  reused many times and for different analyses. In
+                  experiments with Java programs, set-based pre-analysis
+                  eliminates 30% of the program’s local variables and 30%
+                  or more of computed context-sensitive points-to facts,
+                  over a wide set of benchmarks and analyses, resulting in
+                  a 24% average speedup (max: 103%, median: 20%).
+                </p><!-- /paper-abstract -->
+              </div> <!-- /paper -->
+
+              <!-- Introspective Paper -->
+              <div class="paper">
+                <h4 class="paper-heading">
+                  <!-- Paper Title -->
+                  <a href="http://dl.acm.org/citation.cfm?id=594291.2594320">
+                    Introspective Analysis: Context-Sensitivity, Across the Board
+                  </a>
+                  <!-- Toggle Abstract Button -->
+                  <a class="btn toggle-abstract" data-toggle="collapse"
+                     data-target="#introspect-abstract">
+                    abstract
+                  </a>
+                  <!-- Download Button -->
+                  <a class="btn download-btn" href="https://zenodo.org/record/12713/files/main.pdf">
+                    pdf <i class="fa fa-file-pdf-o fa-lg"></i>
+                  </a>
+                  <!-- Paper Authors -->
+                  <span class="paper-authors">
+                    Yannis Smaragdakis, George Kastrinis, George Balatsouras
+                    <!-- Conference -->
+                    <span class="conf">PLDI '14</span>
+                    <!-- Download Link -->
+                    <!-- <a class="btn download2-btn" href="https://zenodo.org/record/12713/files/main.pdf"> -->
+                    <!--   <i class="fa fa-file-pdf-o fa-lg"></i> -->
+                    <!-- </a> -->
+                    
+                  </span>
+                </h4>
+                <p id="introspect-abstract" class="paper-abstract collapse">
+                  Context-sensitivity is the primary approach for adding
+                  more precision to a points-to analysis, while hopefully
+                  also maintaining scalability. An oft-reported problem
+                  with context-sensitive analyses, however, is that they
+                  are bi-modal: either the analysis is precise enough that
+                  it manipulates only manageable sets of data, and thus
+                  scales impressively well, or the analysis gets quickly
+                  derailed at the first sign of imprecision and becomes
+                  orders-of-magnitude more expensive than would be
+                  expected given the program’s size. There is currently no
+                  approach that makes precise context-sensitive analyses
+                  (of any flavor: call-site-, object-, or type-sensitive)
+                  scale across the board at a level comparable to that of
+                  a context-insensitive analysis. To address this issue,
+                  we propose introspective analysis: a technique for
+                  uniformly scaling context-sensitive analysis by
+                  eliminating its performance-detrimental behavior, at a
+                  small precision expense. Introspective analysis consists
+                  of a common adaptivity pattern: first perform a
+                  context-insensitive analysis, then use the results to
+                  selectively refine (i.e., analyze context-sensitively)
+                  program elements that will not cause explosion in the
+                  running time or space. The technical challenge is to
+                  appropriately identify such program elements. We show
+                  that a simple but principled approach can be remarkably
+                  effective, achieving scalability (often with dramatic
+                  speedup) for benchmarks previously completely
+                  out-of-reach for deep context-sensitive analyses.
+                </p><!-- /paper-abstract -->
+              </div> <!-- /paper -->
+
+            </div> <!-- /papers -->
+          </div>   <!-- /#publications -->
+        </div> <!-- /.sect -->
+
+
+        <!-- ================= EMACS SECTION ====================== -->
+        <div class="row sect">
+          <div id="emacs" class="col-xs-12 col-md-11 col-md-offset-1 col-lg-10">
+            <div class="page-header">
+              <h3>ALL THINGS EMACS</h3>
+              <!-- <p class="my-bullets"> -->
+              <!--   <i class="fa fa-circle"></i> -->
+              <!--   <i class="fa fa-circle"></i> -->
+              <!--   <i class="fa fa-circle"></i> -->
+              <!-- </p> -->
+            </div> <!-- /.page-header -->
+            
+            <div class="plain">
+              <h4>Automatic Bytecode Disassembly</h4>
+              <p>Program analysis often requires manual inspection of
+                not just the source code but the actual IR that is
+                passed to the static analysis tool. Most of the times
+                this intermediate representation is a compressed
+                format such as Java bytecode.
+              </p>
+              <p> Thus, to open an Emacs buffer containing Java
+                bytecode for instance, one first needs to run a
+                command that disassembles the file, and then he may
+                open its disassembled contents.
+              </p>
+              <p>Things are even worse when such a file is part of an
+                archive (e.g., inside a jar file). Then you have to
+                extract it first too.
+              </p>
+
+              <p>This is a task that can be easily automated by emacs,
+                assuming your system is properly configured and the
+                actual disassembler commands are included in your PATH
+                (e.g., javap).
+              </p>
+
+              <p>To that end, I wrote these two simple Emacs
+                extensions that handle the task for (i)
+                <a href="https://github.com/gbalats/autodisass-java-bytecode">
+                  Java Bytecode
+                </a> and (ii)
+                <a href="https://github.com/gbalats/autodisass-llvm-bitcode">
+                  LLVM Bitcode
+                </a>.
+              </p>
+
+            </div> <!--  -->
+          </div>   <!-- /emacs -->
+        </div>     <!-- /.sect -->
+      </div>       <!-- /.container-fluid -->
+    </div>         <!-- /#page-content-wrapper -->
+
+  </div><!-- /#wrapper -->
+
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script src="assets/js/classie.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
+  <script src="assets/js/smooth-scroll.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

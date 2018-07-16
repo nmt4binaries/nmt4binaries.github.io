@@ -1,0 +1,24 @@
+# Site settings
+author: George Balatsouras
+title: G. Balatsouras | Homepage
+email: gbalats@gmail.com
+description: Personal web page of George Balatsouras
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://gbalats.github.io" # the base hostname & protocol for your site
+github_username:  gbalats
+bitbucket_username:  gbal
+lastfm_username: gbalats
+disqus_shortname: gbalats
+
+# Build settings
+markdown: kramdown
+
+kramdown:
+  input: GFM
+  hard_wrap: false
+  syntax_highlighter: rouge
+
+# Sass settings
+sass:
+    sass_dir: _sass
+    style: compressed
