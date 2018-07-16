@@ -1,7 +1,7 @@
 # Site settings
 author: Anonymous
 title: InnerEye | Homepage
-description: InnerEye: a binaries similary detection tool 
+description: InnerEye a binaries similary detection tool 
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://ml4binaries.github.io" # the base hostname & protocol for your site
 
