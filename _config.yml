@@ -1,14 +1,9 @@
 # Site settings
-author: George Balatsouras
-title: G. Balatsouras | Homepage
-email: gbalats@gmail.com
-description: Personal web page of George Balatsouras
+author: Anonymous
+title: InnerEye | Homepage
+description: InnerEye: a binaries similary detection tool 
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://gbalats.github.io" # the base hostname & protocol for your site
-github_username:  gbalats
-bitbucket_username:  gbal
-lastfm_username: gbalats
-disqus_shortname: gbalats
+url: "http://ml4binaries.github.io" # the base hostname & protocol for your site
 
 # Build settings
 markdown: kramdown
