@@ -6,9 +6,6 @@ width:
   - col-lg-10
 sections:
 
-  - title: Projects
-    link: "#projects"
-
   - title: All Things Emacs
     link: "#emacs"
 
@@ -18,97 +15,6 @@ sections:
 ---
 
 <div class="container-fluid">
-
-  <!-- ========== PORTOFOLIO SECTION ========== -->
-  <div class="row sect">
-    <div id="projects" class="{{ page.width | join: ' ' }}">
-      <div class="page-header">
-        <h2>
-          PROJECTS
-        </h2>
-      </div>
-
-      <h3>JPhantom</h3>
-
-      {% for paper in site.data.publications %}
-        {% if paper.doi == '2509136.2509530' %}
-          {% assign jphantom_paper = paper %}
-        {% endif %}
-      {% endfor %}
-
-      <p>Many static analysis tools assume that the <em>whole
-        program</em> will be available, in order to analyze it. In
-        practice, however, that is rarely the case, and there are many
-        times that you are stuck with a program which you are able to
-        run, but not analyze (due to some missing code of some library
-        that you don't actually need)!
-      </p>
-
-      <p><a href="https://github.com/gbalats/jphantom">JPhantom</a>
-        tries to deal with this problem for Java, while being agnostic
-        to the actual tool that will perform the static analysis. It
-        applies a preprocessing step that detects phantom code and
-        replaces it with dummy code, thus producing
-        a <em>complete</em> program that should be now analyzable.
-      </p>
-
-      <p>The real challenge of this task is the various type
-        constraints that the final program (plus its dummy complement)
-        must satisfy in order to form
-        valid <a href="http://en.wikipedia.org/wiki/Java_bytecode">Java
-        bytecode</a>. You can read more about it
-        <a target="_blank" href="{{ jphantom_paper.pps_link }}">here</a>
-        and <a href="{{ jphantom_paper.pdf_link }}">here</a>.
-      </p>
-
-      <p>Currently, JPhantom is being used by
-        <a href="http://doop.program-analysis.org/">Doop</a> and
-        <a href="https://github.com/cuplv/droidel">Droidel</a>.
-      </p>
-
-
-      <h3>CCLYZER</h3>
-
-      <p>This project is still at its early stages but, in the long
-        run, it aims to host various analyses written in Datalog for
-        C/C++ programs, or generally any LLVM bitcode generating
-        language. Right now it provides a context-insensitive pointer
-        analysis and is able to recover most of the C++ source
-        information, like v-tables, class hierarchy, etc, and resolve
-        virtual calls with reasonable precision.
-      </p>
-
-      <p>Even though the project is open source
-        and <a href="https://github.com/plast-lab/cclyzer">hosted on
-        github</a>, it requires
-        either <a href="http://snf-705535.vm.okeanos.grnet.gr/agreement.html">PA-Datalog</a>
-        or the original
-        (proprietary) <a href="http://www.logicblox.com/">LogicBlox
-        Engine</a> to run.
-      </p>
-
-      <p>
-        There is also a
-        <a href="{{ page.cclyzer.link }}" data-toggle="modal" data-target="#cclyzerModal">
-          presentation
-        </a>
-        about the basic ideas behind cclyzer's design and modeling of
-        its pointer analysis.
-      </p>
-
-      <!-- cclyzer presentation -->
-      <div class="modal fade" id="cclyzerModal" aria-hidden="true">
-        <div class="modal-dialog">
-          <iframe src="{{ page.cclyzer.embed }}" frameborder="0"
-                  allowfullscreen="true" mozallowfullscreen="true"
-                  webkitallowfullscreen="true">
-          </iframe>
-        </div><!-- /.modal-dialog -->
-      </div><!-- /.modal -->
-
-    </div>   <!-- /#portfolio -->
-  </div> <!-- /.sect -->
-
 
   <!-- ================= EMACS SECTION ====================== -->
   <div class="row sect">
@@ -138,16 +44,6 @@ sections:
         assuming your system is properly configured and the
         actual disassembler commands are included in your PATH
         (e.g., javap).
-      </p>
-
-      <p>To that end, I wrote these two simple Emacs
-        extensions that handle the task for (i)
-        <a href="https://github.com/gbalats/autodisass-java-bytecode">
-          Java Bytecode
-        </a> and (ii)
-        <a href="https://github.com/gbalats/autodisass-llvm-bitcode">
-          LLVM Bitcode
-        </a>.
       </p>
 
       <h3>LB Datalog Mode</h3>
