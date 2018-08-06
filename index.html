@@ -6,10 +6,10 @@ width:
   - col-lg-10
 sections:
 
-  - title: NMT Inspired Binary Analysis
+  - title: Instruction Embedding
     link: "#emacs"
 
-  - title: Siamese model for similarity detection
+  - title: Siamese Model
     link: "#contact"
 
 ---
@@ -20,7 +20,7 @@ sections:
   <div class="row sect">
     <div id="emacs" class="{{ page.width | join: ' ' }}">
       <div class="page-header">
-        <h2>NMT Inspired Binary Analysis</h2>
+        <h2>Instruction Embedding</h2>
       </div> <!-- /.page-header -->
 
       
@@ -44,51 +44,19 @@ sections:
         </li>
       </ol>
       
-      <h3>Automatic Bytecode Disassembly</h3>
-      <p>Program analysis often requires manual inspection of
-        not just the source code but the actual IR that is
-        passed to the static analysis tool. Most of the times
-        this intermediate representation is a compressed
-        format such as Java bytecode.
+      <h3>Download Embedding Files</h3>
+      <p>We have trained three instruction embeddings of which dimension is 50, 100, 150. 
+        To further use our Siamese based tool for binaries similary detection, 
+        you should first download them from the <a href="https://tuprd-my.sharepoint.com/personal/tuh39530_temple_edu/Documents/Forms/All.aspx?slrid=e0fb819e%2De0ad%2D6000%2D3669%2Dd37bcfd7c7f9&RootFolder=%2Fpersonal%2Ftuh39530%5Ftemple%5Fedu%2FDocuments%2FResearch%5Fbackup%2Fw2v&FolderCTID=0x012000611B3D42595CAC4EBABAD90912CD4276">link</a>.
       </p>
-      <p> Thus, to open an Emacs buffer containing Java
-        bytecode for instance, one first needs to run a
-        command that disassembles the file, and then he may
-        open its disassembled contents.
-      </p>
-      <p>Things are even worse when such a file is part of an
-        archive (e.g., inside a jar file). Then you have to
-        extract it first too.
-      </p>
-
-      <p>This is a task that can be easily automated by emacs,
-        assuming your system is properly configured and the
-        actual disassembler commands are included in your PATH
-        (e.g., javap).
-      </p>
-
-      <h3>LB Datalog Mode</h3>
-      <p>Since most of the static analysis tools I have been working
-      on use
-      the <a href="http://en.wikipedia.org/wiki/Datalog">Datalog</a>
-      language, and more specifically, the
-      (proprietary) <a href="http://www.logicblox.com/">LogicBlox
-      Engine</a>, I have been maintaining an
-        <a href="https://github.com/gbalats/lb-datalog-mode">
-          Emacs mode
-        </a> for this exact version of Datalog.
-      </p>
-
-      <p>It mainly provides highlighting and indentation at the
-      moment, but I will be pushing some new features from time to
-      time.
+      <p> Normally, we prefer all instructions can find its embedding in pre-trained .w2v files. 
+        If not, any unknown word will be replaced with zero vector.
       </p>
 
 
     </div><!-- /emacs -->
   </div><!-- /.sect -->
 
-  <!-- ========== CONTACT SECTION ========== -->
   <div class="row sect">
     <div id="contact" class="{{ page.width | join: ' ' }}">
       <div class="page-header">
