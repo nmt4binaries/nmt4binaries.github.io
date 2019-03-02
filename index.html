@@ -6,6 +6,9 @@ width:
   - col-lg-10
 sections:
 
+  - title: Cite This Work
+    link: "#paper"
+
   - title: Instruction Embedding
     link: "#embed"
 
@@ -17,6 +20,29 @@ sections:
 <div class="container-fluid">
 
   <!-- ================= EMACS SECTION ====================== -->
+   <div class="row sect">
+    <div id="paper" class="{{ page.width | join: ' ' }}">
+      <div class="page-header">
+        <h2>Cite This Work</h2>
+      </div> <!-- /.page-header -->
+
+      <p><a href="https://www.ndss-symposium.org/ndss-paper/neural-machine-translation-inspired-binary-code-similarity-comparison-beyond-function-pairs/">Neural Machine Translation Inspired Binary Code Similarity Comparison beyond Function Pairs</a>.</p>
+      <p>Fei Zuo, Xiaopeng Li, Patrick Young, Lannan Luo, Qiang Zeng, Zhexin Zhang</p>
+
+      <p>You are encouraged to cite the following paper if you use the provided resources for academic research.
+      </p>
+      <code>
+      @inproceedings{zuo2019neural,
+      title={{Neural Machine Translation Inspired Binary Code Similarity Comparison beyond Function Pairs}},
+      author={Zuo, Fei and Li, Xiaopeng and Young, Patrick and Luo,Lannan and Zeng,Qiang and Zhang, Zhexin},
+      booktitle={Proceedings of the 2019 Network and Distributed Systems Security Symposium (NDSS)},
+      year={2019}
+      }
+      </code>
+
+    </div><!-- /paper -->
+  </div><!-- /.sect -->
+
   <div class="row sect">
     <div id="embed" class="{{ page.width | join: ' ' }}">
       <div class="page-header">
@@ -54,7 +80,7 @@ sections:
       </p>
 
 
-    </div><!-- /emacs -->
+    </div><!-- /embed -->
   </div><!-- /.sect -->
 
   <div class="row sect">
@@ -73,12 +99,8 @@ sections:
         In detail, each sub-network in such Siamese network is a double-layer LSTM with 100D vector (for each instruction embedding) as input. Please refer to the example script in Python to re-run the test case.
       
       </p>
-      
-      
 
 
-
-
-    </div>   <!-- /#contact -->
+    </div>   <!-- /model -->
   </div> <!-- /.sect -->
 </div><!-- /.container-fluid -->
