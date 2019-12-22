@@ -15,6 +15,9 @@ sections:
   - title: Siamese Model
     link: "#model"
 
+  - title: Modify LLVM
+    link: "#llvm"
+
 ---
 
 <div class="container-fluid">
@@ -112,4 +115,20 @@ sections:
 
     </div>   <!-- /model -->
   </div> <!-- /.sect -->
+  
+  
+  <div class="row sect">
+    <div id="llvm" class="{{ page.width | join: ' ' }}">
+      <div class="page-header">
+        <h2>Modify LLVM</h2>
+      </div>
+      
+        <p>You can modify the backend of llvm to automatically output the bounderies of basic blocks (in .s file) and assign an identifier for each of them.
+           To do that, you need to replace the orginial AsmPrinter.cpp file in llvm project with the one provided <a href="https://github.com/nmt4binaries/nmt4binaries.github.io/tree/master/download/">here</a>.
+        </p>
+
+
+    </div>   <!-- /model -->
+  </div> <!-- /.sect -->
+  
 </div><!-- /.container-fluid -->
