@@ -17,7 +17,7 @@ Then the ROC curve will be displayed, and an AUC value will be computed.
 
 How to modify the backend of llvm to automatically output the bounderies of basic blocks.
 
-Please subsitute AsmPrinter.cpp file provided here with the orginial one in llvm projects. (./lib/CodeGen/AsmPrinter/AsmPrinter.cpp)
+Please subsitute AsmPrinter.cpp file provided here with the orginial one in llvm projects(./lib/CodeGen/AsmPrinter/AsmPrinter.cpp). After doing this, you may need to re-compile your llvm project.
 
 LLVM provides two useful functions in MachineBasicBlock Class:
 
