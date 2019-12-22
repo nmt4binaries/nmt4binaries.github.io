@@ -27,4 +27,4 @@ LLVM provides two useful functions in MachineBasicBlock Class:
 
 We use getFullName() to generate an identifier for each basic block. Please refer to [llvm documents online](https://llvm.org/doxygen/classllvm_1_1MachineBasicBlock.html) to learn more details.
 
-**Please note that the version of llvm we used in our implementation is 6.0.0. Considering the updates of llvm, different verisons of software may lead to unknown problems.
+**Please note that the version of llvm we used in our implementation is 6.0.0. Considering the updates of llvm, different verisons of software may lead to unknown problems.**
